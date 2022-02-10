@@ -206,20 +206,20 @@
             <g id="numbers">
                 <text class="primary" y="-100">12</text>
                 <g transform="rotate(30)"><text class="primary" y="-100">1</text></g>
-                <g transform="rotate(60)"><text class="primary" y="-80">2</text></g>
-                <g transform="rotate(90)"><text class="primary" y="-80">3</text></g>
-                <g transform="rotate(300)"><text class="primary" y="97">4</text></g>
-                <g transform="rotate(330)"><text class="primary" y="97">5</text></g>
-                <g><text class="primary" y="97">6</text></g>
-                <g transform="rotate(30)"><text class="primary" y="97">7</text></g>
-                <g transform="rotate(60)"><text class="primary" y="97">8</text></g>
-                <g transform="rotate(270)"><text class="primary" y="-80">9</text></g>
-                <g transform="rotate(300)"><text class="primary" y="-80">10</text></g>
-                <g transform="rotate(330)"><text class="primary" y="-80">11</text></g>
+                <g transform="rotate(60)"><text class="primary" y="-100">2</text></g>
+                <g transform="rotate(90)"><text class="primary" y="-100">3</text></g>
+                <g transform="rotate(300)"><text class="primary" y="117">4</text></g>
+                <g transform="rotate(330)"><text class="primary" y="117">5</text></g>
+                <g><text class="primary" y="117">6</text></g>
+                <g transform="rotate(30)"><text class="primary" y="117">7</text></g>
+                <g transform="rotate(60)"><text class="primary" y="117">8</text></g>
+                <g transform="rotate(270)"><text class="primary" y="-100">9</text></g>
+                <g transform="rotate(300)"><text class="primary" y="-100">10</text></g>
+                <g transform="rotate(330)"><text class="primary" y="-100">11</text></g>
             </g>
 
             <!-- Quarter-hour markers -->
-            <!-- <g transform="rotate(  0)">
+            <g transform="rotate(  0)">
                 <rect class="mainDialQuarter quarterHourClr" />
             </g>
             <g transform="rotate( 90)">
@@ -230,7 +230,7 @@
             </g>
             <g transform="rotate(270)">
                 <rect class="mainDialQuarter quarterHourClr" />
-            </g> -->
+            </g>
 
             <!-- 5-Minute Outer Markers -->
             <!-- <g transform="rotate( 30)">
@@ -347,54 +347,58 @@
         </section> -->
         <g transform="translate(50%,50%)">
             <g id="hourhand">
-                <!-- sides -->
-                <line x1="-3" y1="0%" x2="-3" y2="-30%" stroke-width="3" stroke-linecap="butt"
+                <!-- body -->
+                <line x1="0" y1="0%" x2="0" y2="-30%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="3" y1="0%" x2="3" y2="-30%" stroke-width="3" stroke-linecap="butt"
+                <!-- butt -->
+                <line x1="0" y1="0%" x2="3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <!-- point -->
-                <line x1="-3" y1="-30%" x2="0" y2="-35%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0" y1="0%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="3" y1="-30%" x2="0" y2="-35%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3" y1="9%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <!-- point fill -->
-                <line x1="-3" y1="-30%" x2="3" y2="-30%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0" y1="0%" x2="0" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="0" y1="-30%" x2="0" y2="-34%" stroke-width="3" stroke-linecap="butt"
-                    class="minHandClr mainHand" />
+                <!-- arrow -->
+                <line x1="0" y1="-30%" x2="-3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                    class="minHandClr mainHandArrow" />
+                <line x1="0" y1="-30%" x2="3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                    class="minHandClr mainHandArrow" />
             </g>
             <g id="minutehand">
-                <!-- sides -->
-                <line x1="-3" y1="0%" x2="-3" y2="-43%" stroke-width="3" stroke-linecap="butt"
+                <!-- body -->
+                <line x1="0" y1="0%" x2="0" y2="-40%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="3" y1="0%" x2="3" y2="-43%" stroke-width="3" stroke-linecap="butt"
+                <!-- butt -->
+                <line x1="0" y1="0%" x2="3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <!-- point -->
-                <line x1="-3" y1="-43%" x2="0" y2="-48%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0" y1="0%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="3" y1="-43%" x2="0" y2="-48%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3" y1="9%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <!-- point fill -->
-                <line x1="-3" y1="-43%" x2="3" y2="-43%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0" y1="0%" x2="0" y2="9%" stroke-width="1" stroke-linecap="butt"
                     class="minHandClr mainHand" />
-                <line x1="0" y1="-43%" x2="0" y2="-46%" stroke-width="3" stroke-linecap="butt"
-                    class="minHandClr mainHand" />
+                <!-- arrow -->
+                <line x1="0" y1="-40%" x2="-3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                    class="minHandClr mainHandArrow" />
+                <line x1="0" y1="-40%" x2="3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                    class="minHandClr mainHandArrow" />
             </g>
             <!-- minute hand center -->
             <circle cx="0" cy="0" r="8" class="minHandClr mainHand" />
             <!-- second hand -->
             <g id="secondhand">
                 <!-- body -->
-                <line x1="0" y1="0%" x2="0" y2="-48%" stroke-width="3" stroke-linecap="butt" class="secHandClr" />
+                <line x1="0" y1="0%" x2="0" y2="-40%" stroke-width="1" stroke-linecap="butt" class="secHandClr" />
                 <!-- butt -->
-                <line x1="0" y1="0%" x2="3" y2="9%" stroke-width="3" stroke-linecap="butt" class="secHandClr" />
-                <line x1="0" y1="0%" x2="-3" y2="9%" stroke-width="3" stroke-linecap="butt" class="secHandClr" />
-                <line x1="3" y1="9%" x2="-3" y2="9%" stroke-width="3" stroke-linecap="butt" class="secHandClr" />
-                <line x1="0" y1="0%" x2="0" y2="9%" stroke-width="3" stroke-linecap="butt" class="secHandClr" />
+                <line x1="0" y1="0%" x2="3" y2="9%" stroke-width="1" stroke-linecap="butt" class="secHandClr" />
+                <line x1="0" y1="0%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt" class="secHandClr" />
+                <line x1="3" y1="9%" x2="-3" y2="9%" stroke-width="1" stroke-linecap="butt" class="secHandClr" />
+                <line x1="0" y1="0%" x2="0" y2="9%" stroke-width="1" stroke-linecap="butt" class="secHandClr" />
                 <!-- arrow -->
-                <line x1="0" y1="-48%" x2="-3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                <line x1="0" y1="-40%" x2="-3" y2="9%" stroke-width="2" stroke-linecap="butt"
                     class="secHandClr mainHandArrow" />
-                <line x1="0" y1="-48%" x2="3" y2="9%" stroke-width="2" stroke-linecap="butt"
+                <line x1="0" y1="-40%" x2="3" y2="9%" stroke-width="2" stroke-linecap="butt"
                     class="secHandClr mainHandArrow" />
             </g>
             <!-- main hand center circles -->
