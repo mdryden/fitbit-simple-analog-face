@@ -9,12 +9,7 @@
     "appDisplayName": "Analog Multi-dial Chronograph",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
-    "requestedPermissions": [
-      "access_activity",
-      "access_user_profile",
-      "access_heart_rate",
-      "access_location"
-    ],
+    "requestedPermissions": [],
     "buildTargets": [
       "mira",
       "meson",

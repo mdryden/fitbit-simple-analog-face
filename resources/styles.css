@@ -1,7 +1,31 @@
-.primary {
-  font-size: 25;
+.text {
   fill: white;
   text-anchor: middle;
+}
+
+.twelve {
+  font-size: 28;
+}
+
+.date {
+  font-size: 25;
+}
+
+.battery {
+  font-size: 20;
+}
+
+.battery-low {
+  fill: crimson;
+  font-weight: bold;
+}
+
+.date-box {
+  fill: white;
+  opacity: 0.8;
+}
+.date-box-fill {
+  fill: black;
 }
 
 /*
@@ -10,23 +34,7 @@
 .tickClr {
   fill: white;
 }
-.subMinTickClr {
-  fill: white;
-}
-/* .fiveMinOuterClr {
-  fill: red;
-  opacity: 0;
-} */
-.fiveMinMiddleClr {
-  fill: blue;
-}
-/* .fiveMinInnerClr {
-  fill: green;
-}*/
-.quarterHourClr {
-  fill: silver;
-  opacity: 1;
-}
+
 .minHandClr {
   fill: dimgrey;
 }
