@@ -13,10 +13,22 @@
             <text id="dayOfMonth" x="248" y="158" class="text date" />
         </g>
 
+        <!-- battery lower middle option -->
         <g transform="translate(50%,50%)">
             <text id="battery" x="0" y="100" text-length="4" class="text battery" />
             <text id="batteryLow" x="0" y="100" text-length="4" class="text battery battery-low"/>
         </g>
+
+        <!-- battery left option -->
+        <!-- <g transform="translate(50%,50%)">
+            <text id="battery" x="-90" y="7" text-length="4" class="text battery" />
+            <text id="batteryLow" x="-90" y="7" text-length="4" class="text battery battery-low"/>
+        </g> -->
+
+        <!-- bottom digital time -->
+        <!-- <g transform="translate(50%,50%)">
+            <text id="digitalTime" x="0" y="100" text-length="8" class="text time" />
+        </g> -->
 
         <g transform="translate(50%,50%)">
             <g id="hourhand">
