@@ -19,6 +19,7 @@ let batteryChargeLevel = -1;
 
 clock.ontick = tick => {
   adjustTime(tick.date);
+  // setManualTime();
   adjustDate(tick.date);
   adjustBattery();
 };
@@ -32,16 +33,16 @@ function adjustTime(date) {
   minutehand.groupTransform.rotate.angle = 6 * currentMinutes + 0.1 * date.getSeconds();
   secondhand.groupTransform.rotate.angle = 6 * date.getSeconds();
 
-  // let hours = date.getHours();
-  // let minutes = date.getMinutes();
-  // let marker = "AM";
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let marker = "AM";
 
-  // if (hours > 12) {
-  //   hours = hours - 12;
-  //   marker = "PM";
-  // }
+  if (hours > 12) {
+    hours = hours - 12;
+    marker = "PM";
+  }
 
-  // digitalTime.text = `${hours}:${minutes} ${marker}`;
+  digitalTime.text = `${10}:${minutes} ${marker}`;
 }
 
 function adjustDate(date) {
@@ -67,4 +68,15 @@ function adjustBattery() {
       lowBatteryPercent.style.display = "none";
     }
   }
+}
+
+/* debugging */
+
+function setManualTime() {
+  let minute = 11;
+  let hour = 2;
+  let seconds = 14;
+  hourhand.groupTransform.rotate.angle = 30 * (hour % 12) + 0.5 * currentMinutes;
+  minutehand.groupTransform.rotate.angle = 6 * minute + 0.1 * 35;
+  secondhand.groupTransform.rotate.angle = 6 * seconds;
 }

@@ -4,9 +4,9 @@
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "e942e96f-e8f7-4bbe-921d-1622d25a7c3b",
+    "appUUID": "b9908c93-9802-42b9-b5ee-98a93ad6f6a5",
     "appType": "clockface",
-    "appDisplayName": "Analog Multi-dial Chronograph",
+    "appDisplayName": "Simple Analog",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
     "requestedPermissions": [],
@@ -17,7 +17,7 @@
     ],
     "i18n": {
       "en-US": {
-        "name": "Analog Multi-dial Chronograph"
+        "name": "Simple Analog"
       }
     },
     "defaultLanguage": "en-US"
