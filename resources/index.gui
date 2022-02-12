@@ -12,8 +12,9 @@
 
         <!-- battery lower middle option -->
         <g transform="translate(50%,50%)">
-            <text id="battery" x="0" y="100" text-length="4" class="text battery" />
-            <text id="batteryLow" x="0" y="100" text-length="4" class="text battery battery-low"/>
+            <!-- <text id="battery" x="0" y="100" text-anchor="middle" text-length="5" class="text battery" /> -->
+            <text id="batteryLow" x="0" y="100" text-length="4" text-anchor="middle"  class="battery battery-low"/>
+            <text id="batteryCritical" x="0" y="100" text-length="4" text-anchor="middle"  class="battery battery-critical"/>
         </g>
 
         <!-- 
@@ -30,9 +31,7 @@
         </g> -->
 
         <!-- digital time -->
-        <!-- <g transform="translate(50%,50%)"> -->
-            <text id="digitalTime" x="50%" y="25%" text-anchor="middle" text-length="8" class="time" />
-        <!-- </g> -->
+        <text id="digitalTime" x="50%" y="25%" text-anchor="middle" text-length="8" class="time" />
 
         <g transform="translate(50%,50%)">
             <g id="hourhand">
@@ -57,9 +56,15 @@
             </g>
 
             <!-- hand circles -->
-            <circle id="outercenterdot" cx="0" cy="0" r="8" class="minute-hand-color" />
-            <circle id="outercenterdot" cx="0" cy="0" r="4" class="second-hand-color" />
-            <circle id="innercenterdot" cx="0" cy="0" r="1" class="" />
+            <circle id="minuteHandDot" cx="0" cy="0" r="8" class="minute-hand-color" />
+            <circle id="secondHandDot" cx="0" cy="0" r="4" class="second-hand-color" />
+
+            <!-- battery circles, visible when battery gets low -->
+            <!-- <circle id="minuteHandDotLowBattery" cx="0" cy="0" r="8" class="battery-low" />
+            <circle id="minuteHandDotCriticalBattery" cx="0" cy="0" r="8" class="battery-critical" /> -->
+
+            <!-- "pin" in the middle of the circles -->
+            <circle cx="0" cy="0" r="1" class="" />
         </g>
     </section>
 </svg>

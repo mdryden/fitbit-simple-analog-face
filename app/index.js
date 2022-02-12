@@ -6,9 +6,11 @@ import { battery } from "power";
 let hourhand = document.getElementById("hourhand");
 let minutehand = document.getElementById("minutehand");
 let secondhand = document.getElementById("secondhand");
-
-let batteryPercent = document.getElementById("battery");
-let lowBatteryPercent = document.getElementById("batteryLow");
+// let batteryLevel = document.getElementById("battery");
+let batteryLevelLow = document.getElementById("batteryLow");
+let batteryLevelCritical = document.getElementById("batteryCritical");
+let minuteHandDotLowBattery = document.getElementById("minuteHandDotLowBattery");
+let minuteHandDotCriticalBattery = document.getElementById("minuteHandDotCriticalBattery");
 let dayOfMonth = document.getElementById("dayOfMonth");
 let digitalTime = document.getElementById("digitalTime");
 
@@ -55,17 +57,22 @@ function adjustDate(date) {
 function adjustBattery() {
   if (batteryChargeLevel !== battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
-    batteryPercent.text = `${batteryChargeLevel}%`;
-    lowBatteryPercent.text = batteryPercent.text;
 
-    let batteryLow = batteryChargeLevel < 15;
+    // batteryChargeLevel = batteryChargeLevel - 75; // debug: low
+    // batteryChargeLevel = batteryChargeLevel - 90; // debug: critical
 
-    if (batteryLow) {
-      lowBatteryPercent.style.display = "block";
-      batteryPercent.style.display = "none";
+    let batteryLow = batteryChargeLevel <= 30;
+    let batteryCritical = batteryChargeLevel <= 15;
+
+    if (batteryCritical) {
+      batteryLevelCritical.style.display = "inline";
+      batteryLevelCritical.text = `${batteryChargeLevel}%`;
+    } else if (batteryLow) {
+      batteryLevelLow.style.display = "inline";
+      batteryLevelLow.text = `${batteryChargeLevel}%`;
     } else {
-      batteryPercent.style.display = "block";
-      lowBatteryPercent.style.display = "none";
+      batteryLevelCritical.style.display = "none";
+      batteryLevelLow.style.display = "none";
     }
   }
 }
