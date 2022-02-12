@@ -2,15 +2,13 @@
 import clock from "clock";
 import document from "document";
 import { battery } from "power";
+import { zeroPad } from "./utils";
 
 let hourhand = document.getElementById("hourhand");
 let minutehand = document.getElementById("minutehand");
 let secondhand = document.getElementById("secondhand");
-// let batteryLevel = document.getElementById("battery");
 let batteryLevelLow = document.getElementById("batteryLow");
 let batteryLevelCritical = document.getElementById("batteryCritical");
-let minuteHandDotLowBattery = document.getElementById("minuteHandDotLowBattery");
-let minuteHandDotCriticalBattery = document.getElementById("minuteHandDotCriticalBattery");
 let dayOfMonth = document.getElementById("dayOfMonth");
 let digitalTime = document.getElementById("digitalTime");
 
@@ -30,21 +28,24 @@ function adjustTime(date) {
   if (date.getMinutes() !== currentMinutes) {
     currentMinutes = date.getMinutes();
     hourhand.groupTransform.rotate.angle = 30 * (date.getHours() % 12) + 0.5 * currentMinutes;
+
+    let hours = date.getHours();
+    let minutes = zeroPad(date.getMinutes(), 2);
+    let marker = "AM";
+
+    if (hours >= 12) {
+      marker = "PM";
+    }
+
+    if (hours > 12) {
+      hours = hours - 12;
+    }
+
+    digitalTime.text = `${hours}:${minutes} ${marker}`;
   }
 
   minutehand.groupTransform.rotate.angle = 6 * currentMinutes + 0.1 * date.getSeconds();
   secondhand.groupTransform.rotate.angle = 6 * date.getSeconds();
-
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let marker = "AM";
-
-  if (hours > 12) {
-    hours = hours - 12;
-    marker = "PM";
-  }
-
-  digitalTime.text = `${10}:${minutes} ${marker}`;
 }
 
 function adjustDate(date) {
