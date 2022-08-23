@@ -41,6 +41,10 @@ function adjustTime(date) {
       hours = hours - 12;
     }
 
+    if (hours == 0) {
+      hours = 12;
+    }
+
     digitalTime.text = `${hours}:${minutes} ${marker}`;
   }
 
@@ -67,6 +71,7 @@ function adjustBattery() {
 
     if (batteryCritical) {
       batteryLevelCritical.style.display = "inline";
+      batteryLevelLow.style.display = "none";
       batteryLevelCritical.text = `${batteryChargeLevel}%`;
     } else if (batteryLow) {
       batteryLevelLow.style.display = "inline";
